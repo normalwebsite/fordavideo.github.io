@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWlan Chat</title>
+</head>
+
+
+<!-- The chatroom GUI-->
+<body id="main" style="background-color: rgb(222, 222, 222);";>
+<fieldset style="background: rgb(94, 94, 164); color: aliceblue;">
+            <code>Welcome back, gbuttman</code>
+                <button style="float: right;">Logout</button>
+            <button style="float: right; background-color: rgb(0, 253, 0);">Donate us</button>
+</fieldset>
+<fieldset style="background-color: aliceblue; height: 5cm; height: auto;">
+<div id="out">
+    <h2 id="username"></h2>
+</div>
+</fieldset>
+<body style="z-index: 3;">
+<fieldset style="z-index: 3;">
+        <textarea id="create"></textarea><button onclick="send()">Send</button> 
+</fieldset>
+<fieldset style="width: 5cm;">
+<h2>You are visitor: #1148</h2>
+</fieldset>
+
+<h6 style="margin-top: 5cm;">Copyright WebWlan Chat: 2017-2020</h6>
+</body>
+
+</body>
+<!-- END OF The chatroom GUI-->
+</html>
+
+
+
+
+
+
+<script>
+ let botactivate = 0
+const msg = [
+    "hey",                                                                                    // Remember me, this aryan starts with 0 // is anyone here? ABC if ur not gay
+    "yeah",                                                                                   // 1 // I never expected a reply
+    "I was exploring my old computer I stumble across this site from the fav tab",            // 2 // what are you doing here in this dead server?
+    "and yeah that how i found it",                                                           // Whatever comes after 2 // ahhh same
+    "yeah",                                                                                   // Whatever comes after 2 // yk, im suprised this website is still up after 5 years without updates
+    "gbuttman?",                                                                              // Whatever comes after 2 // wonder if the owner knows thatthe site is still up
+    "I think I remember u",                                                                   // Whatever comes after 2 // ?
+    "u were arguing with someone",                                                            // Whatever comes after 2 //
+    "u were arguing something about politics",                                                // Whatever comes after 2 // what arguement
+    "I do",                                                                                   // Whatever comes after 2 // I dont remember
+    "do you have telegram",                                                                   // Whatever comes after 2 // I have nothing much to say
+    "you should install it",                                                                  // Whatever comes after 2 // I only have Discord and Google chat
+    "why",                                                                                    // Whatever comes after 2 // no
+    "ok",                                                                                     // Whatever comes after 2 // Im not download an app just only for u
+    "I have to go",                                                                           // Whatever comes after 2 // Besides, since no ones here, I could give you my gmail, wedontcareaboursafty@gmail.com
+    "ok"                                                                                      // cya
+
+    ]
+
+
+function send() {
+    /*
+        Const
+    */
+    // message log
+  
+
+   const botmsg = [
+    "WebWlan Chat discontinued updates since 2020. For more info, visit <a href='https://sites.google.com/view/webwlanchat'>https://sites.google.com/view/webwlanchat</a>"
+   ]
+
+   // END OF message logs
+   // START
+    const inp = document.getElementById("create")
+    const outp = document.getElementById("out")
+    const outpuser = document.createElement("h2")
+    const cr = document.createElement("h3")
+     let date = new Date
+    // END --------------------------------------------
+    // Start of extra extensions
+    cr.innerHTML = inp.value
+    outpuser.innerHTML = "gbuttman: " + date.getHours() + ":" + date.getMinutes() + " "+ date.getDate() + "/"+  date.getMonth() + "/"+ "2025"
+    cr.style = "font-size: large;"
+    outpuser.style = "color: red;"
+    // END -------------------------------------------
+    // Start of append
+    out.append(outpuser)
+    outp.append(cr)
+    // END -------------------------------------------
+
+    // IF STATEMENTS
+
+    if (botactivate<1) {
+        // FUCK THIS SHIT, THIS CODE STAYS IN +
+        // UPDATE, I DIDNT PUT THE VARIABLE OUTSIDE THE FUNCTION :SKULL:
+
+        const botmsgnew = document.createElement("h2")
+        botmsgnew.style = "color: gray"
+        botmsgnew.innerHTML = botmsg
+        outp.append(botmsgnew)
+
+        botactivate++
+
+    } else {
+        console.log(botactivate)
+                botactivate++
+
+    }
+
+    if (botactivate>2) {
+        const namefag = document.createElement("h2")
+         const usermsg = document.createElement("h3")
+         let date = new Date
+         let responsetime = Math.floor(Math.random() *15000) + 5000
+        setTimeout(() => {
+                    namefag.innerHTML = "xXSHADOWBLAZE213Xx: " + date.getHours() + ":" + date.getMinutes() + " "+ date.getDate() + "/"+  date.getMonth() + "/"+ "2025"
+        namefag.style = "color: blue;"
+        usermsg.innerHTML = msg[0]
+        outp.append(namefag, usermsg)
+        msg.shift(0)
+        }, responsetime);
+
+        if (botactivate===8) {
+            const namefag2 = document.createElement("h2")
+            const usermsg2 = document.createElement("h3")
+         namefag2.innerHTML = "xXSHADOWBLAZE213Xx: " + date.getHours() + ":" + date.getMinutes() + " "+ date.getDate() + "/"+  date.getMonth() + "/"+ "2025"
+        namefag2.style = "color: blue;"
+        usermsg2.innerHTML = msg[0]
+        outp.append(namefag2, usermsg2)
+        msg.shift(0)
+        }
+
+    }
+
+}
+
+
+
+</script>
+
+<style>
+    h2 {
+        margin-inline-start: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+    h3 {
+        margin-inline-start: 0.2;
+        margin-block-start: 0.15em;
+        margin-block-end: 0;
+    }
+
+    #typing {
+        display: none;
+    }
+</style>
